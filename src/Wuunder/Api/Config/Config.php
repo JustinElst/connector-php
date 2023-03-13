@@ -33,10 +33,8 @@ abstract class Config implements \JsonSerializable
 
     /**
     * Adds together default and user input items
-    *
-    * @return array A full list of all the items that are set by user and default
     */
-    public function jsonSerialize()
+    public function jsonSerialize(): mixed
     {
         return array_merge($this->defaultFields, $this->setFields);
     }
